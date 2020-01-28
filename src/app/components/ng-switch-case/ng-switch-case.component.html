@@ -1,0 +1,23 @@
+<ul class="btn-group" role="group">
+  <button
+    [class.active]="viewMode == 'map'"
+    type="button"
+    class="btn btn-primary"
+    (click)="viewMode = 'map'"
+  >
+    Maps
+  </button>
+  <button
+    [class.active]="viewMode == 'list'"
+    type="button"
+    class="btn btn-primary"
+    (click)="viewMode = 'list'"
+  >
+    List
+  </button>
+</ul>
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Maps component</div>
+  <div *ngSwitchCase="'list'">List component</div>
+  <div *ngSwitchDefault>Default</div>
+</div>

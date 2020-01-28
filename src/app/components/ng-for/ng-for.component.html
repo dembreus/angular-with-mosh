@@ -1,0 +1,9 @@
+<button class="btn btn-success" (click)="loadCourses()">Load Coarses</button>
+
+<button class="btn btn-success" (click)="onAdd()">Add</button>
+<ul>
+  <li *ngFor="let course of courses; trackBy: trackCourse">
+    {{ course.name }}
+    <button class="btn btn-danger" (click)="onRemove(course)">Remove</button>
+  </li>
+</ul>
